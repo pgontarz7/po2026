@@ -11,13 +11,13 @@ public class CodingBat {
     }
 
     int countXX(String str) {
-        int counter=0;
+        int countr=0;
 
         for(int j=0; j<str.length()-1; j++){
             if (str.substring(j, j+2).equals("xx"))
-                counter++;
+                countr++;
         }
-        return counter;
+        return countr;
 
     }
 
