@@ -21,12 +21,29 @@ public class CodingBat {
 
     }
 
+    public String helloName(String name) {
+
+            return "Hello " + name + "!";
+    }
+
+
+    public int countEvens(int[] nums) {
+        int counter = 0;
+        for(int i =0; i<nums.length; i++){
+            if(nums[i]%2==0){
+                counter++;
+            }
+        }
+        return counter;
+    }
+
 
 
 
     public static void main(String[] args){
 
         CodingBat codingBat = new CodingBat();
+
         //doubleX
         System.out.println(codingBat.doubleX("bxxxx"));
         System.out.println(codingBat.doubleX("bxxfx"));
@@ -36,6 +53,17 @@ public class CodingBat {
         System.out.println(codingBat.countXX("xxxx"));
         System.out.println(codingBat.countXX("xx"));
         System.out.println(codingBat.countXX("asdf"));
+
+        //helloName
+        System.out.println(codingBat.helloName("Bob"));
+        System.out.println(codingBat.helloName("Peter"));
+        System.out.println(codingBat.helloName("Marcus"));
+
+        //countEvens
+        System.out.println(codingBat.countEvens(new int[]{1,2,3,4,5}));
+        System.out.println(codingBat.countEvens(new int[]{1,1,1,1,1}));
+        System.out.println(codingBat.countEvens(new int[]{2,4,6,8}));
+
 
     }
 
