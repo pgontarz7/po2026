@@ -1,5 +1,9 @@
 package agh.po.lab3;
 
+import java.util.HashMap;
+import java.util.Map;
+
+
 public class CodingBat {
     boolean doubleX(String str) {
         int i = str.indexOf("x");
@@ -37,6 +41,19 @@ public class CodingBat {
         return counter;
     }
 
+    public Map<String, String> mapAB2(Map<String, String> map) {
+        if (map.containsKey("a") && map.containsKey("b")) {
+            if (map.get("a").equals(map.get("b"))) {
+                map.remove("a");
+                map.remove("b");
+            }
+        }
+        return map;
+    }
+
+    //public Map<String, Integer> wordCount(String[] strings) {
+
+    //}
 
 
 
@@ -63,6 +80,11 @@ public class CodingBat {
         System.out.println(codingBat.countEvens(new int[]{1,2,3,4,5}));
         System.out.println(codingBat.countEvens(new int[]{1,1,1,1,1}));
         System.out.println(codingBat.countEvens(new int[]{2,4,6,8}));
+
+        //mapAB2
+        System.out.println(codingBat.mapAB2(new HashMap<>(Map.of("a", "kot", "b", "kot"))));
+        System.out.println(codingBat.mapAB2(new HashMap<>(Map.of("a", "aaa", "c", "aaa"))));
+        System.out.println(codingBat.mapAB2(new HashMap<>(Map.of("a", "aaa", "b", "AAA", "c", "pies"))));
 
 
     }
