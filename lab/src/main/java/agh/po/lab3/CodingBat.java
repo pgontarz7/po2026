@@ -51,9 +51,30 @@ public class CodingBat {
         return map;
     }
 
-    //public Map<String, Integer> wordCount(String[] strings) {
 
-    //}
+
+    public Map<String, Integer> wordCount(String[] strings) {
+        Map<String, Integer> map = new HashMap<>();
+
+        for (int i =0; i<strings.length; i++){
+            String s = strings[i];
+
+            if (map.containsKey(s)) {
+
+                int ile = map.get(s);
+                ile = ile + 1;
+                map.put(s, ile);
+
+            } else {
+                map.put(s, 1);
+            }
+
+
+        }
+
+
+        return map;
+    }
 
 
 
@@ -85,6 +106,12 @@ public class CodingBat {
         System.out.println(codingBat.mapAB2(new HashMap<>(Map.of("a", "kot", "b", "kot"))));
         System.out.println(codingBat.mapAB2(new HashMap<>(Map.of("a", "aaa", "c", "aaa"))));
         System.out.println(codingBat.mapAB2(new HashMap<>(Map.of("a", "aaa", "b", "AAA", "c", "pies"))));
+
+        //wordCount
+        System.out.println(codingBat.wordCount(new String[]{"a","b","b","a"}));
+        System.out.println(codingBat.wordCount(new String[]{"a","b","b","c"}));
+        System.out.println(codingBat.wordCount(new String[]{"f","a","d","c"}));
+
 
 
     }

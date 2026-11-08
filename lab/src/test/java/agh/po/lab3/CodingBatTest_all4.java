@@ -53,4 +53,37 @@ public class CodingBatTest_all4 {
         assertEquals(Map.of("a", "aaa", "b", "bbb", "c", "aaa"),
                 codingBat.mapAB2(new HashMap<>(Map.of("a", "aaa", "b", "bbb", "c", "aaa"))));
     }
+
+
+    @Test
+    public void wordCount(){
+
+        assertEquals(Map.of("a", 2, "b", 1),
+                codingBat.wordCount(new String[]{"a", "a", "b"}));
+
+        assertEquals(Map.of("a", 2, "b", 2),
+                codingBat.wordCount(new String[]{"a", "a", "b", "b"}));
+
+        assertEquals(Map.of("x", 5, "b", 2),
+                codingBat.wordCount(new String[]{"x", "x", "b", "b", "x", "x", "x"}));
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+
