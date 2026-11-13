@@ -11,9 +11,9 @@ public class Zoo {
     Animal[] animals = new Animal[100];
 
     public void fillRandom() {
-        Random random = new Random();
+        Random obiekt = new Random();
         for (int i = 0; i < animals.length; i++) {
-            int r = random.nextInt(3);
+            int r = obiekt.nextInt(3);
             switch (r) {
                 case 0:
                     animals[i] = new Parrot("Papuga" + i);
@@ -28,6 +28,7 @@ public class Zoo {
         }
     }
 
+
     public int sumLegs() {
         int sum = 0;
         for (int i = 0; i < animals.length; i++) {
@@ -36,9 +37,19 @@ public class Zoo {
         return sum;
     }
 
+
     public static void main(String[] args) {
-        Zoo zoo = new Zoo();
-        zoo.fillRandom();
-        System.out.println("Suma nog: " + zoo.sumLegs());
+        Zoo obiekt_zoo = new Zoo();
+        obiekt_zoo.fillRandom();
+        System.out.println("Suma nog: " + obiekt_zoo.sumLegs());
+
+        for (int i = 0; i < obiekt_zoo.animals.length; i++) {
+
+            int legs = obiekt_zoo.animals[i].getLegs();
+            obiekt_zoo.animals[i].getDescription();
+            System.out.println("Nogi: " + legs);
+            obiekt_zoo.animals[i].makeSound();
+        }
+
     }
 }

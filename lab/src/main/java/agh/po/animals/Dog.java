@@ -10,4 +10,8 @@ public class Dog extends Animal {
     public String getDescription() {
         return "Pies " + name + " ma " + legs + " nogi.";
     }
+
+    @Override
+    public void makeSound() {
+    }
 }

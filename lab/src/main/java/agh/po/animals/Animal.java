@@ -3,7 +3,8 @@ package agh.po.animals;
 public abstract class Animal {
     String name;
     int legs;
-    abstract String getDescription();
+    public abstract String getDescription();
+    public void makeSound(){};
 
     public Animal(String name, int legs) {
         this.name = name;
@@ -11,8 +12,11 @@ public abstract class Animal {
     }
 
     public int getLegs() {
+
         return legs;
     }
+
+
 
 
 

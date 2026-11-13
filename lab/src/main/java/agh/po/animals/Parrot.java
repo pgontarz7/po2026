@@ -7,7 +7,11 @@ public class Parrot extends Animal {
     }
 
     @Override
-    String getDescription() {
+    public String getDescription() {
         return  "Papuga " + name + " ma " + legs + " nogi.";
+    }
+
+    @Override
+    public void makeSound() {
     }
 }
