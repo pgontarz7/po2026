@@ -50,6 +50,9 @@ public class Zoo {
             System.out.println("Nogi: " + legs);
             obiekt_zoo.animals[i].makeSound();
         }
+        Dog obiekt1 = new Dog("burek");
+        obiekt1.strzyzeniePsa();
+
 
     }
 }
